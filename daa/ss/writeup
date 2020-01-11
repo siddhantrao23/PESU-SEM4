@@ -1,0 +1,15 @@
+Sequential sort is a sorting technique used to find an occurance of
+the given key in an array.
+
+Functions implemented:
+
+	searchFirstOccurrence searches for the given key in the array by iterating
+	through the array from beginning to end i.e. 0 to n and checking if the key
+	is present. It returns the index of the key if found and -1 otherwise.
+
+	searchLastOccurrence searches for the given key in the array by iterating
+	through the array from the end to the beginning i.e. n-1 to 0 and checking
+	if the key is present. It returns the index of the key if found and -1 otherwise.
+
+	numOccurrences performs sequential search on the array for the key and increments
+	a counter everytime the key is found in the array. This count is then returned.
