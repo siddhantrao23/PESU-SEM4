@@ -1,0 +1,25 @@
+String matching is the process of finding a substring within a string.
+
+Functions implemented:
+
+Description of searchFirstOccurrence
+=====================================
+Declaration: int searchFirstOccurrence(char *pattern, char *text);
+
+searchFirstOccurrence finds the first occurance of the pattern in the text by iterating
+through the text from o to n-m. It returns -1 if the pattern isn't found and the offset
+of the substring if found.
+
+Description of searchLastOccurrence  
+=====================================
+Declaration: int searchLastOccurrence(char *pattern, char *text);
+
+searchLastOccurrence finds the last occurance of the pattern in the text by iterating
+through the text from n-m uptil 0. It returns -1 if the pattern isn't found and the offset
+of the substring if found.
+
+int numOccurrences(char *pattern, char *text);
+
+int longestPrefix(char *pattern, char *text);
+
+int charactersCompared(char *pattern, char *text);

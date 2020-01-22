@@ -3,13 +3,30 @@ the given key in an array.
 
 Functions implemented:
 
-	searchFirstOccurrence searches for the given key in the array by iterating
-	through the array from beginning to end i.e. 0 to n and checking if the key
-	is present. It returns the index of the key if found and -1 otherwise.
+Description of searchFirstOccurrence
+=====================================
 
-	searchLastOccurrence searches for the given key in the array by iterating
-	through the array from the end to the beginning i.e. n-1 to 0 and checking
-	if the key is present. It returns the index of the key if found and -1 otherwise.
+Decleration: int searchFirstOccurrence(int arr[], int n, int key);
 
-	numOccurrences performs sequential search on the array for the key and increments
-	a counter everytime the key is found in the array. This count is then returned.
+searchFirstOccurrence searches for the given key in the array by iterating
+through the array from beginning to end i.e. 0 to n and checking if the key
+is present. It returns the index of the key if found and -1 otherwise.
+
+
+Description of searchLastOccurrence
+====================================
+
+Decleration: int searchLastOccurrence(int arr[], int n, int key);
+
+searchLastOccurrence searches for the given key in the array by iterating
+through the array from the end to the beginning i.e. n-1 to 0 and checking
+if the key is present. It returns the index of the key if found and -1 otherwise
+
+
+Description of numOccurrences
+==============================
+
+Decleration: int numOccurrences(int arr[], int n, int key);
+
+numOccurrences performs sequential search on the array for the key and increments
+a counter everytime the key is found in the array. This count is then returned.
