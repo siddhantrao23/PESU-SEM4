@@ -11,9 +11,16 @@ int tsp(int n, int graph[][n]){
     }
     int mincost=INT_MAX;
     do{
+        if(graph[0][comb[0]] == -1 || graph[comb[n-2]][0] == -1) {
+            break;
+        }
+
         int cost=graph[0][comb[0]];
         cost=cost+graph[comb[n-2]][0];
         for(int i=0;i<n-2;i++){
+            if(graph[comb[i]][comb[i+1]] == -1) {
+                break;
+            }
             cost=cost+graph[comb[i]][comb[i+1]];
         }
         if(cost<mincost)
@@ -51,6 +58,7 @@ int* printPath(int n, int graph[][n]){
 }
 
 int getCost(int n, int graph[][n], int *p){
+    //if
     int c=graph[0][p[0]];
     c=c+graph[p[n-1]][0];
     for(int i=0;i<n-1;i++){
