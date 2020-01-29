@@ -1,6 +1,3 @@
-Sequential sort is a sorting technique used to find an occurance of
-the given key in an array.
-
 Functions implemented:
 
 Description of searchFirstOccurrence

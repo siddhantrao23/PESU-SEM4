@@ -1,0 +1,43 @@
+Sorting is a technique to arrange data in either increasing or decreasing order
+
+Desciption of isSorted
+==============================
+
+Declaration: int isSorted(int *a, int n);
+
+The function iterates through the entire array and compares all adjacent
+elements and returns false if the first element is greater than the second
+
+Desciption of bubblePass
+==============================
+
+Declaration: void bubblePass(int *a, int n);
+
+The function iterates through the array and swaps two adjacent elements if the
+first element is greater than the second
+
+
+Desciption of bubbleSort
+==============================
+
+Declaration: void bubbleSort(int *a, int n);
+
+Performs bubble sort by repeatedly calling bubblePass but with a smaller (n-i)
+length array where i ranges from 0 to n
+
+
+Desciption of numBubblePasses
+==============================
+
+Declaration: int numBubblePasses(int *a, int n);
+
+Finds the minimum number of passes required to sort by using the bubble sort
+algorithm. This is done by checking in every iteration if the array is sorted
+and incrementing the count for every iteration.
+
+
+Description of maxIndex
+==============================
+
+Declaration: int maxIndex(int *a, int n);
+

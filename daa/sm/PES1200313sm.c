@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <string.h>
 
 int searchFirstOccurrence(char *pattern, char *text)
