@@ -10,7 +10,7 @@ typedef struct Record {
 //Sorts the array of Records on the serialnumber field using the Insertion Sort algorithm.
 //Sorts the array A in-place and returns the comparison count.
 long int InsertionSort(Record* A, int n);
-
+long int BinaryInsertionSort(Record* A, int n);
 //Bubble Sort
 //Sorts the array of Records on the serialnumber field using the Bubble Sort algorithm.
 //Sorts the array A in-place and returns the comparison count.

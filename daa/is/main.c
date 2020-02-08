@@ -17,8 +17,8 @@ double time_elapsed(struct timespec start, struct timespec end)
 int main()
 {
 
-    int num;
-    scanf("%d",&num);
+    long int num;
+    scanf("%ld",&num);
     Record Insert[num];
     Record Bubble[num];
     Record Select[num];
@@ -33,9 +33,9 @@ int main()
     struct timespec start, end; //timestamps
 
     clock_gettime(CLOCK_REALTIME, &start); //Start timestamp
-    long int result = InsertionSort(Insert,num);
+    long int result = BinaryInsertionSort(Insert,num);
     clock_gettime(CLOCK_REALTIME, &end); //End timestamp
-    printf("Insertion Sort : %ld %lf\n",result,time_elapsed(start, end));
+    printf("Binary Insertion Sort : %ld %lf\n",result,time_elapsed(start, end));
 
     clock_gettime(CLOCK_REALTIME, &start); //Start timestamp
     result = BubbleSort(Bubble,num);
