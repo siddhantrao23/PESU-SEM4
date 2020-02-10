@@ -24,7 +24,7 @@ end:
     SWI 0x011
 
 .data
-    A: .asciz "hellodyud"
+    A: .asciz "hi there"
     B: .asciz "g"
     C: .asciz "found"
     D: .asciz "not found"

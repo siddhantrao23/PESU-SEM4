@@ -7,8 +7,11 @@ loop:
     BNE loop
 
     SUB r2, r2, #1
+    MOV r0, r2
+    MOV r1, r2
+    SWI 0x02b
     SWI 0x011
 
 .data
-    str: .asciz "hell"
+    str: .asciz "hello world"
 
