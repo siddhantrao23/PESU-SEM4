@@ -1,4 +1,3 @@
-.text
 MOV r0, #0
 loop:
     SWI 0x201
@@ -10,4 +9,4 @@ delay:
     BNE delay
     CMP r0, #3
     BLE loop
-.end
+SWI 0x011
