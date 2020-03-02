@@ -1,11 +1,14 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-#define SIZE 3
+#define SIZE 6
 
-int graph[][SIZE] = {{0,1,1},
-                     {0,0,1},
-                     {0,0,0}
+int graph[][SIZE] = {{0,1,1,0,0,0},
+                     {0,0,0,0,0,0},
+                     {0,0,0,0,1,1},
+                     {0,0,0,0,0,0},
+                     {0,0,0,0,0,0},
+                     {0,0,0,0,0,0},
                     };
 
 void DFS(int v, bool visited[]);
@@ -17,7 +20,7 @@ void dfs(int v)
     {
         visited[i] = false;
     }
-    DFS(v,visited);
+    DFS(v, visited);
 }
 
 void DFS(int v, bool visited[])
@@ -29,10 +32,11 @@ void DFS(int v, bool visited[])
             DFS(i,visited);
 
     }
-    printf("%d\n",v);
+    printf("Task %d --> ",v);
 }
 
 int main()
 {
     dfs(0);
+    printf("Done\n");
 }
