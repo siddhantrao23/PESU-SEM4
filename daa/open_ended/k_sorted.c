@@ -3,7 +3,8 @@
 #include<limits.h>
  
 #define n 4
- 
+
+// design an algorithm to merge k sorted lists and analyse efficiency
 // A min heap node
 struct MinHeapNode
 {
