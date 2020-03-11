@@ -1,17 +1,41 @@
 .text
-    LDR r0, =str
-loop:
-    LDRb r1, [r0], #1    
-    ADD r2, r2, #1
-    CMP r1, #0
-    BNE loop
+  LDR r0, =A
+  MOV r2, #0
+  MOV r3, #9
 
-    SUB r2, r2, #1
-    MOV r0, r2
-    MOV r1, r2
-    SWI 0x02b
-    SWI 0x011
+  LDR r1, =B
+  LDR r1, [r1]
+
+loop:
+  CMP r3, r2
+  BMI notfound
+  ADD r4, r3, r2
+  MOV r4, r4, LSR #1
+  MOV r4, r4, LSL #2
+  LDR r5, [r4, r0]
+  CMP r5, r1
+  BEQ found
+  BMI egtm
+  MOV r3, r4, LSR #2
+  B loop
+
+egtm:
+  MOV r2, r4, LSR #2
+  ADD r2, r2, #1
+  B loop
+
+found:
+  LDR r0, =F
+  SWI 0x02
+  SWI 0x011
+
+notfound:
+  LDR r0, =N
+  SWI 0x02
+  SWI 0x011
 
 .data
-    str: .asciz "hello world"
-
+    A: .word 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+    B: .word 130
+    F: .asciz "found"
+    N: .asciz "not found"

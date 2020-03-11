@@ -1,41 +1,12 @@
-.text
-  LDR r0, =A
-  MOV r2, #0
-  MOV r3, #9
-
-  LDR r1, =B
-  LDR r1, [r1]
-
+MOV r0, #0
 loop:
-  CMP r3, r2
-  BMI notfound
-  ADD r4, r3, r2
-  MOV r4, r4, LSR #1
-  MOV r4, r4, LSL #2
-  LDR r5, [r4, r0]
-  CMP r5, r1
-  BEQ found
-  BMI egtm
-  MOV r3, r4, LSR #2
-  B loop
-
-egtm:
-  MOV r2, r4, LSR #2
-  ADD r2, r2, #1
-  B loop
-
-found:
-  LDR r0, =F
-  SWI 0x02
-  SWI 0x011
-
-notfound:
-  LDR r0, =N
-  SWI 0x02
-  SWI 0x011
-
-.data
-    A: .word 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
-    B: .word 130
-    F: .asciz "found"
-    N: .asciz "not found"
+    SWI 0x201
+    ADD r0, r0, #1
+    MOV r4, #64000
+delay:
+    SUBs r4, r4, #1
+    CMP r4, #0
+    BNE delay
+    CMP r0, #3
+    BLE loop
+SWI 0x011
